@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<app-hero></app-hero>
+
+<!-- Sección Nodos -->
+<section id="nodes" class="section-nodes container" style="padding: 6rem 0;">
+  <h2 class="title-serif" style="font-size: 2.5rem;">Nodos físicos</h2>
+  <div class="nodes-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; margin-top: 2rem;">
+    <div *ngFor="let node of nodes" class="node-card" style="background: var(--bg-surface); border-radius: var(--radius-lg); padding: 1.5rem; border: 1px solid var(--border-warm);">
+      <h3 style="font-family: var(--font-mono); color: var(--amber);">{{ node.label }}</h3>
+      <p style="margin: 0.5rem 0;">{{ node.role }}</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">{{ node.cpu }} · {{ node.ram }}</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+        <span *ngFor="let svc of node.services" [style.background]="svc.color + '22'" style="padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.7rem;">{{ svc.name }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Servicios -->
+<section id="services" class="section-services container" style="padding: 4rem 0 8rem;">
+  <h2 class="title-serif" style="font-size: 2.5rem;">Servicios desplegados</h2>
+  <div style="display: grid; gap: 1.5rem; margin-top: 2rem;">
+    <div *ngFor="let service of services" class="service-item" style="background: var(--bg-surface); border-radius: var(--radius-md); padding: 1.25rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem;">
+      <img [src]="service.logoUrl" style="width: 48px; height: 48px; object-fit: contain;" (error)="$event.target.style.display='none'">
+      <div style="flex: 1;">
+        <h3 style="font-family: var(--font-sans); font-weight: 500;">{{ service.name }}</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">{{ service.shortDesc }}</p>
+        <a [routerLink]="['/service', service.id]" class="btn btn--ghost" style="margin-top: 0.5rem; display: inline-block;">Ver detalles →</a>
+      </div>
+    </div>
+  </div>
+</section>

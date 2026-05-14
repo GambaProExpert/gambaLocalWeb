@@ -1,0 +1,106 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  padding: 1.5rem 5%;
+  transition: all 0.4s ease;
+
+  &.scrolled {
+    background: rgba(14, 12, 10, 0.92);
+    backdrop-filter: blur(16px);
+    padding: 1rem 5%;
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+  }
+}
+
+.nav-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  text-decoration: none;
+  color: var(--text-primary);
+
+  &:hover .brand-name {
+    color: var(--amber);
+  }
+}
+
+.brand-mark {
+  width: 28px;
+  color: var(--amber-soft);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.brand-name {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: var(--text-primary);
+  transition: color 0.3s;
+}
+
+.brand-sub {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.25s;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--amber);
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    color: var(--amber-soft);
+    &::after { width: 100%; }
+  }
+
+  &--icon {
+    display: flex;
+    align-items: center;
+    opacity: 0.5;
+    &:hover { opacity: 1; color: var(--amber-soft); }
+    &::after { display: none; }
+  }
+}

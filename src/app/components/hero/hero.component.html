@@ -1,0 +1,95 @@
+<section class="hero">
+  <div class="hero-shelves" aria-hidden="true">
+    <div class="shelf shelf--1"></div>
+    <div class="shelf shelf--2"></div>
+    <div class="shelf shelf--3"></div>
+    <div class="shelf shelf--4"></div>
+  </div>
+
+  <!-- Warm ambient glow orbs -->
+  <div class="ambient" aria-hidden="true">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+  </div>
+
+  <div class="hero-content container">
+    <div class="hero-left animate-up-1">
+      <p class="label-mono">GambaEsclavos · 2026</p>
+
+      <h1 class="hero-title title-serif">
+        <span class="line line--dim">Mi</span>
+        <span class="line line--main">Homelab</span>
+        <span class="line line--accent">
+          <em>Al ajillo</em>
+          <span class="title-rule"></span>
+        </span>
+      </h1>
+
+      <p class="hero-lead animate-up-2">
+        Tres nodos físicos. Ocho servicios. Control absoluto<br>
+        de privacidad, almacenamiento y entretenimiento.
+      </p>
+
+      <div class="hero-cta animate-up-3">
+        <a href="#nodes" class="btn btn--primary">
+          Ver infraestructura
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 10h12M10 4l6 6-6 6"/>
+          </svg>
+        </a>
+        <a href="#services" class="btn btn--ghost">Explorar servicios</a>
+      </div>
+    </div>
+
+    <div class="hero-right animate-up-2">
+      <div class="status-panel">
+        <div class="status-panel__header">
+          <span class="label-mono">Servicios en los nodos</span>
+          <div class="live-badge">
+            <span class="live-dot"></span>
+            <span>Dandole caña</span>
+          </div>
+        </div>
+
+        <div class="status-panel__nodes">
+          <div class="snode" *ngFor="let node of nodes" [style.--nc]="node.accent">
+            <div class="snode-indicator"></div>
+            <div class="snode-info">
+              <span class="snode-label">{{ node.label }}</span>
+              <span class="snode-role">{{ node.role }}</span>
+            </div>
+            <div class="snode-services">
+              <span
+                class="snode-pill"
+                *ngFor="let svc of node.services"
+                [style.background]="svc.color + '22'"
+                [style.border-color]="svc.color + '44'"
+              >{{ svc.name }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="status-panel__footer">
+          <div class="metric">
+            <span class="metric-val">36 GB</span>
+            <span class="metric-lbl">RAM Total</span>
+          </div>
+          <div class="metric-sep"></div>
+          <div class="metric">
+            <span class="metric-val">9</span>
+            <span class="metric-lbl">Servicios</span>
+          </div>
+          <div class="metric-sep"></div>
+          <div class="metric">
+            <span class="metric-val">100%</span>
+            <span class="metric-lbl">Self-hosted</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom fade -->
+  <div class="hero-fade"></div>
+</section>

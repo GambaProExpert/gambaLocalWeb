@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="container" style="padding-top: 8rem; padding-bottom: 6rem;">
+  <div *ngIf="service; else notFound">
+    <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+      <img [src]="service.logoUrl" style="width: 80px;" (error)="$event.target.style.display='none'">
+      <div>
+        <h1 class="title-serif" style="font-size: 3rem;">{{ service.name }}</h1>
+        <p class="label-mono">{{ service.tagline }}</p>
+      </div>
+    </div>
+    <div style="margin-top: 2rem; background: var(--bg-surface); border-radius: var(--radius-lg); padding: 2rem;">
+      <p><strong>{{ service.loremTitle }}</strong></p>
+      <p>{{ service.shortDesc }}</p>
+      <p><strong>Categoría:</strong> <span [style.color]="service.categoryColor">{{ service.category }}</span></p>
+      <p><strong>Nodo:</strong> <span [style.color]="service.nodeAccent">{{ service.node }}</span></p>
+      <a [href]="service.website" target="_blank" class="btn btn--primary" style="margin-top: 1.5rem;">Ir al sitio oficial</a>
+      <a routerLink="/" class="btn btn--ghost" style="margin-left: 1rem;">Volver al inicio</a>
+      <p><a [href]="service.videoUrl" target="_blank" class="btn btn--primary" style="margin-top: 1.5rem;"><br><br>Ver video al respecto</a></p>
+    </div>
+  </div>
+  <ng-template #notFound>
+    <h2>Servicio no encontrado</h2>
+    <a routerLink="/" class="btn btn--ghost">Regresar</a>
+  </ng-template>
+</div>
