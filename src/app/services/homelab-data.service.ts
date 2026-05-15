@@ -94,7 +94,7 @@ export class HomelabDataService {
     {
       id: 'tailscale',
       name: 'Tailscale',
-      tagline: 'La red de casa en cualquier lado, hasta en la red de tu madre',
+      tagline: 'La red de casa en cualquier lado, hasta en San Pedro',
       shortDesc: 'VPN mesh basada en WireGuard para acceso remoto seguro a toda la infraestructura.',
       category: 'Red',
       categoryColor: '#7c6cf8',
