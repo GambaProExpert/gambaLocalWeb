@@ -89,7 +89,8 @@ export class HomelabDataService {
       tags: ['DNS', 'Ad-block', 'Privacidad'],
       website: 'https://pi-hole.net',
       logoUrl: 'https://pi-hole.net/wp-content/uploads/2016/12/Vortex-R.png',
-      loremTitle: 'Cómo Pi-hole protege tu red'
+      loremTitle: 'Cómo Pi-hole protege tu red',
+      videoUrl: 'https://www.youtube.com/watch?v=ZnziaVh-3VA'
     },
     {
       id: 'tailscale',
@@ -103,7 +104,8 @@ export class HomelabDataService {
       tags: ['VPN', 'WireGuard', 'Remoto'],
       website: 'https://tailscale.com',
       logoUrl: 'https://tailscale.gallerycdn.vsassets.io/extensions/tailscale/vscode-tailscale/1.1.0/1759776117386/Microsoft.VisualStudio.Services.Icons.Default',
-      loremTitle: 'Configurando acceso remoto con Tailscale'
+      loremTitle: 'Configurando acceso remoto con Tailscale',
+      videoUrl: 'https://www.youtube.com/watch?v=ZnziaVh-3VA'
     },
     {
       id: 'wazuh',

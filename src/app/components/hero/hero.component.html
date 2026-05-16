@@ -53,7 +53,7 @@
         </div>
 
         <div class="status-panel__nodes">
-          <div class="snode" *ngFor="let node of nodes" [style.--nc]="node.accent">
+          <a href="#nodes" class="snode" *ngFor="let node of nodes" [style.--nc]="node.accent">
             <div class="snode-indicator"></div>
             <div class="snode-info">
               <span class="snode-label">{{ node.label }}</span>
@@ -67,7 +67,7 @@
                 [style.border-color]="svc.color + '44'"
               >{{ svc.name }}</span>
             </div>
-          </div>
+          </a>
         </div>
 
         <div class="status-panel__footer">
