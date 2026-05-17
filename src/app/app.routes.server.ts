@@ -1,7 +1,8 @@
-import { RenderMode, ServerRoute } from '@angular/ssr';
+//import { RenderMode, ServerRoute } from '@angular/ssr';
 import { inject } from '@angular/core';
 import { HomelabDataService } from './services/homelab-data.service';
 
+/*
 export const serverRoutes: ServerRoute[] = [
   {
     path: 'service/:id',
@@ -17,3 +18,4 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Server, 
   },
 ];
+*/
