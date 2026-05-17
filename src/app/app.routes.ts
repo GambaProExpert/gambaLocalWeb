@@ -9,5 +9,6 @@ export const routes: Routes = [
     path: 'service/:id',
     loadComponent: () => import('./pages/service-detail/service-detail.component').then(m => m.ServiceDetailComponent)
   },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: ''}
+  
 ];
