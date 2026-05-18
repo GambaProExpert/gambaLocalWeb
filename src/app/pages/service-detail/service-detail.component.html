@@ -15,8 +15,38 @@
       <p><strong>Nodo:</strong> <span [style.color]="service.nodeAccent">{{ service.node }}</span></p>
       <a [href]="service.website" target="_blank" class="btn btn--primary" style="margin-top: 1.5rem;">Ir al sitio oficial</a>
       <a routerLink="/" class="btn btn--ghost" style="margin-left: 1rem;">Volver al inicio</a>
-      <p><a [href]="service.videoUrl" target="_blank" class="btn btn--primary" style="margin-top: 1.5rem;"><br><br>Ver video al respecto</a></p>
     </div>
+
+    <div class="video-section" *ngIf="embedUrl">
+      <div class="video-section__header">
+        <div class="video-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+        <div>
+          <br>
+          <p class="label-mono">Recurso multimedia</p>
+          <h3 class="video-section__title">Vídeo relacionado</h3>
+        </div>
+      </div>
+ 
+      <div class="video-wrapper">
+        <div class="video-frame-deco video-frame-deco--tl"></div>
+        <div class="video-frame-deco video-frame-deco--tr"></div>
+        <div class="video-frame-deco video-frame-deco--bl"></div>
+        <div class="video-frame-deco video-frame-deco--br"></div>
+        <iframe
+          [src]="embedUrl"
+          class="video-embed"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="Vídeo sobre {{ service.name }}"
+        ></iframe>
+      </div>
+    </div>
+ 
   </div>
   <ng-template #notFound>
     <h2>Servicio no encontrado</h2>
