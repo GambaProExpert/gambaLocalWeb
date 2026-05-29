@@ -48,6 +48,7 @@ export class HomelabDataService {
         { name: 'Wazuh',     color: '#1a6b7a' },
         { name: 'Nginx PM',  color: '#2d8a6b' },
         { name: 'n8n',       color: '#e85d25' },
+        { name: 'Outline',   color: '#00ffdd' },
       ]
     },
     {
@@ -205,6 +206,20 @@ export class HomelabDataService {
       website: 'https://cubecoders.com/AMP',
       logoUrl: 'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/amp.png',
       loremTitle: 'Servidores de juegos con AMP'
+    },
+    {
+      id: 'outline',
+      name: 'Outline',
+      tagline: 'Gestión de documentos instructivos',
+      shortDesc: 'Creador y editor de documentos de planificación que sirve para estructurar y organizar procedimientos de todo tipo. Para no olvidarse de nada.',
+      category: 'Planificación',
+      categoryColor: '#00ffdd',
+      node: 'NODE-01',
+      nodeAccent: '#a0622e',
+      tags: ['Gestión', 'Planificación', 'Documentos'],
+      website: 'https://docs.getoutline.com/s/hosting/doc/docker-7pfeLP5a8t',
+      logoUrl: 'https://www.getoutline.com/images/icon-desktop.png',
+      loremTitle: 'Outline para la gestión de documentos'
     }
   ];
 
