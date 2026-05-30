@@ -310,7 +310,7 @@
   display: block;
   font-family: var(--font-mono);
   font-size: 1rem;
-  color: var(--nc);
+  color: rgb(128, 64, 0);
   letter-spacing: 0.15em;
   margin-bottom: 0.2rem;
 }
@@ -348,7 +348,7 @@
   display: block;
   font-family: var(--font-serif);
   font-size: 1.4rem;
-  color: var(--amber-soft);
+  color: var(--text-primary);
   line-height: 1;
   margin-bottom: 0.2rem;
 }
